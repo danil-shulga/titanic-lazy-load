@@ -10,22 +10,23 @@ const data = await fetch(
 const server = {
   filter: '',
   chunkSize: 20,
+  filteredData: data,
 
   setFilter(str) {
     this.filter = str;
   },
 
   posts(page = 1) {
-    let filteredData = data.filter((passenger) => {
-      if (this.filter === '') return passenger;
+    if (!(this.filter === '')) {
+      this.filteredData = data.filter((passenger) => {
+        const searchField = createSearchField(passenger);
+        return searchField.toLowerCase().includes(this.filter.toLowerCase());
+      });
+    }
 
-      const searchField = createSearchField(passenger);
-      return searchField.toLowerCase().includes(this.filter.toLowerCase());
-    });
-
-    const finished = page >= filteredData.length / this.chunkSize;
+    const finished = page >= this.filteredData.length / this.chunkSize;
     const next = finished ? null : page + 1;
-    const posts = getDataChunk(filteredData, page, this.chunkSize);
+    const posts = getDataChunk(this.filteredData, page, this.chunkSize);
 
     return new Promise((resolve) => {
       // имитация ответа сервера
