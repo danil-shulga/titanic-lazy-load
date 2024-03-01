@@ -22,6 +22,8 @@ const server = {
         const searchField = createSearchField(passenger);
         return searchField.toLowerCase().includes(this.filter.toLowerCase());
       });
+    } else {
+      this.filteredData = data;
     }
 
     const finished = page >= this.filteredData.length / this.chunkSize;
