@@ -23,8 +23,6 @@ const server = {
       return searchField.toLowerCase().includes(this.filter.toLowerCase());
     });
 
-    console.log(filteredData);
-
     const finished = page >= filteredData.length / this.chunkSize;
     const next = finished ? null : page + 1;
     const posts = getDataChunk(filteredData, page, this.chunkSize);

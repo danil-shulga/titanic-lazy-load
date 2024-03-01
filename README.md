@@ -1,7 +1,13 @@
-Тестовое задание
+- [Страница на Vercel](https://titanic-lazy-load-swart.vercel.app/)
+
+frontend/titanic
+
+## Тестовое задание
+
 Разработать приложение для просмотра списка пассажиров Титаника.
 
-Данные взять в этом репозитории: https://github.com/altkraft/for-applicants/raw/master/frontend/titanic/passengers.json
+Данные взять в этом репозитории:
+https://github.com/altkraft/for-applicants/raw/master/frontend/titanic/passengers.json
 
 Применяем чистый JS/HTML/CSS.
 
@@ -9,7 +15,10 @@
 
 Размещение данных в таблице - на усмотрение разработчика, необходимый минимум:
 
-Имя
-Пол
-Возраст
-Выжил пассажир или нет
+- Имя
+- Пол
+- Возраст
+- Выжил пассажир или нет
+
+Поиск также по перечисленным параметрам.
+Стиль оформления - на усмотрение разработчика.
