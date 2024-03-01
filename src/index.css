@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  
+  background: url('./assets/20617.jpg') fixed center / cover;
+}
+
+.searchForm {
+  display: flex;
+  gap: 10px;
+  margin: 30px 50px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.searchForm_input {
+  flex: 1 1;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.searchForm_button {
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.passengerList {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.passenger {
+  box-sizing: border-box;
+}
+
+.passengerList_item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "name name name name"
+  "gender age survived ticket";
+  list-style: none;
+  background-color: rgba(243, 245, 253, 0.9);
+  padding: 10px;
+}
+
+.passenger_gender,
+.passenger_age,
+.passenger_survived,
+.passenger_ticket {
+  margin: 0;
+}
+
+.passenger_name {
+  margin: 10px 0 20px;
+  grid-area: name;
+}
+.passenger_gender {
+  grid-area: gender;
+}
+.passenger_age {
+  grid-area: age;
+}
+.passenger_survived {
+  grid-area: survived;
+}
+.passenger_ticket {
+  grid-area: ticket;
+}
