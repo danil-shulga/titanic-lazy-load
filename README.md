@@ -1,4 +1,6 @@
-- [Страница на Vercel](https://titanic-lazy-load-swart.vercel.app/)
+## Реализация
+
+[Страница на Vercel](https://titanic-lazy-load-swart.vercel.app/)
 
 frontend/titanic
 
