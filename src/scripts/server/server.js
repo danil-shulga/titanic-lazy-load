@@ -13,6 +13,7 @@ const server = {
   filteredData: data,
 
   setFilter(str) {
+    if (str === 'male') str = ' male' // "чуть-чуть" костыль который отсекает 'female' но и все имена с 'male' )))
     this.filter = str;
   },
 
