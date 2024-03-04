@@ -5,8 +5,9 @@ import { searchSubmit } from './src/scripts/Search/searchSubmit.js';
 import { btnUp } from './src/assets/UI/btnUp.js';
 
 const checkPositionThrottle = throttle(checkPosition, 200);
-window.addEventListener('scroll', () => checkPositionThrottle(fetchPosts));
-window.addEventListener('resize', () => checkPositionThrottle(fetchPosts));
+const fetchPostsOnScroll = () => checkPositionThrottle(fetchPosts)
+window.addEventListener('scroll', fetchPostsOnScroll);
+window.addEventListener('resize', fetchPostsOnScroll);
 
 fetchPosts();
 
